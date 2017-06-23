@@ -7,7 +7,6 @@ from blogs.models import Blog, Post
 from blogs.serializers import blogSerializer, PostSerializer,PostListSerializer
 from blogs.permissions import PostPermission
 
-
 class BlogViewSet(ModelViewSet):
     queryset = Blog.objects.all()
     serializer_class = blogSerializer

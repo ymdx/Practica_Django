@@ -33,10 +33,11 @@ class LoginView(View):
 
         return render(request, 'login.html', context)
 
-def logout(request):
-    django_logout(request)
+class LogoutView(View):
+    def get(self, request):
+        django_logout(request)
+        return redirect('index')
 
-    return redirect('index')
 
 class SignUpView(View):
     def get(self, request):
